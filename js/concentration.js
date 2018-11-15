@@ -4,6 +4,7 @@ $(function(){
     var pick_first = 0;
     var pick_second = 0;
     var card_no_ar = [];
+    var moveflg = true;
 
     var shuffle = function() {return Math.random()-.5}
     for($x = 0;$x < $(".card").length;$x++){
@@ -18,6 +19,9 @@ $(function(){
 
     });
     $(".card").on(click,function(){
+        if(!moveflg){
+            return false;
+        }
         var idx = $(".card").index(this);
 
         var card_no = str_zero(card_no_ar[idx],3);
@@ -33,9 +37,11 @@ $(function(){
                 $("#test").append("yes!");
             }else{
                 $("#test").append("no!");
+                moveflg = false;
                 setTimeout(function(){
-                    $(".card").removeClass("kurukuru");
 
+                    $(".card").removeClass("kurukuru");
+                    moveflg = true;
                 },1500);
 
             }
