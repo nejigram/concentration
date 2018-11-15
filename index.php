@@ -29,7 +29,7 @@
                     <img src="https://www.nejigram.com/assets/img/stamp/top.png" height="50%" class="gs">
                 </div>
                 <div class="ura tc">
-                    <img src="https://www.nejigram.com/assets/img/stamp/<?=sprintf("%03d",$cdata->card[$x]["cardno"]);?>.png" height="50%">
+                    <img src="" height="50%">
                 </div>
 
             </div>
