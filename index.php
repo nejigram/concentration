@@ -9,7 +9,7 @@
 <link rel='stylesheet' href='../assets/css/common.css' type='text/css' />
 <link rel='stylesheet' href='css/concentration.css' type='text/css' />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/concentration.js"></script>
+<script type="text/javascript" src="js/concentration.js?<?=mt_rand();?>"></script>
 
 </head>
 <body>

@@ -3,15 +3,23 @@ $(function(){
     var picknum = 0;
     var pick_first = 0;
     var pick_second = 0;
+    var firstcard;
     var card_no_ar = [];
     var moveflg = true;
+    var secondcard;
 
     var shuffle = function() {return Math.random()-.5}
     for($x = 0;$x < $(".card").length;$x++){
         card_no_ar.push($x +1);
         card_no_ar.push($x +1);
+//        $("#test").append($x+1 + "|");
     }
+//    $("#test").append("<br />");
     card_no_ar.sort(shuffle);
+//    for($x = 0;$x < card_no_ar.length;$x++){
+
+//        $("#test").append(card_no_ar[$x] + "|");
+//    }
 
     $(window).on('load resize',function(){
 
@@ -24,9 +32,9 @@ $(function(){
         }
         var idx = $(".card").index(this);
 
-        var card_no = str_zero(card_no_ar[idx],3);
+        var card_no = card_no_ar[idx];
 
-        $(this).find(".ura").find("img").attr("src","https://www.nejigram.com/assets/img/stamp/"+ card_no +".png");
+        $(this).find(".ura").find("img").attr("src","https://www.nejigram.com/assets/img/stamp/"+ str_zero(card_no,3) +".png");
 
         $(this).addClass("kurukuru");
 
@@ -38,9 +46,10 @@ $(function(){
             }else{
                 $("#test").append("no!");
                 moveflg = false;
+                secondcard = $(this);
                 setTimeout(function(){
-
-                    $(".card").removeClass("kurukuru");
+                    firstcard.removeClass("kurukuru");
+                    secondcard.removeClass("kurukuru");
                     moveflg = true;
                 },1500);
 
@@ -51,6 +60,7 @@ $(function(){
             pick_second = 0;
 
         }else{
+            firstcard = $(this);
             pick_first = card_no;
 
         }

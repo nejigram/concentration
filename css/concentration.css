@@ -61,7 +61,14 @@
 .kurukuru{
     animation: kuru .5s forwards;
 }
+.kurukuru2{
+    animation: kuru2 .5s forwards;
+}
 @keyframes kuru {
     100% {transform: rotateY(180deg)}
+
+}
+@keyframes kuru2 {
+    100% {transform: rotateY(360deg)}
 
 }
