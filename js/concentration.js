@@ -9,17 +9,11 @@ $(function(){
     var secondcard;
 
     var shuffle = function() {return Math.random()-.5}
-    for($x = 0;$x < $(".card").length;$x++){
+    for($x = 0;$x < $(".card").length /2;$x++){
         card_no_ar.push($x +1);
         card_no_ar.push($x +1);
-//        $("#test").append($x+1 + "|");
     }
-//    $("#test").append("<br />");
     card_no_ar.sort(shuffle);
-//    for($x = 0;$x < card_no_ar.length;$x++){
-
-//        $("#test").append(card_no_ar[$x] + "|");
-//    }
 
     $(window).on('load resize',function(){
 
