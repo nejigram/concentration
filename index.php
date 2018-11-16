@@ -21,6 +21,12 @@
 <p id="test"></p>
 
 <article class="box m0a pd_1 mt_1">
+    <div class="fbox strdata">
+        <div class="fitem_25"><p class="ws_nowrap fs_0_8">NG : <span id="str_ng" class=""></span></p></div>
+        <div class="fitem_25"><p class="ws_nowrap fs_0_8">NICE! : <span id="str_nice" class=""></span></p></div>
+        <div class="fitem_25"><p class="ws_nowrap fs_0_8">SCORE : <span id="str_score" class=""></span></p></div>
+        <div class="fitem_25"><p class="ws_nowrap fs_0_8">TIME : <span id="str_time" class="">0:00:00</span></p></div>
+    </div>
     <div class="fbox">
         <?php for($x = 0;$x < $cdata->cardnum;$x++) :?>
         <div class="fitem">
