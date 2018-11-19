@@ -40,6 +40,8 @@ $(function(){
     }
     card_no_ar.sort(shuffle);
 
+    height_check("fitem");
+
     $(window).on('load resize',function(){
 
         height_check("fitem");
